@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&family=Roboto:wght@400;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 4.9%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 63.9%;
+    
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 48 96% 51%; /* Amarelo Vibrante */
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-black text-white;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Teko', sans-serif;
+    @apply uppercase tracking-wider;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:py-24 lg:px-8;
+  }
+
+  .btn-cta {
+    @apply w-full sm:w-auto inline-block text-center font-bold px-12 py-4 text-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1;
+  }
+
+  .btn-yellow {
+    @apply bg-yellow-400 text-black hover:bg-yellow-500 shadow-lg shadow-yellow-400/20;
+  }
+  
+  .form-input {
+    @apply w-full px-4 py-3 bg-gray-900 border-2 border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all;
+  }
+
+  .form-label {
+    @apply block text-sm font-bold mb-2 text-gray-400 uppercase;
+  }
+
+  .form-error {
+    @apply text-red-400 text-sm mt-1;
+  }
+}
